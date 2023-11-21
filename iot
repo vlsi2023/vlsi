@@ -1,0 +1,54 @@
+LED Blinking Sketch:
+void setup()
+{
+pinMode(13, OUTPUT);
+}
+void loop()
+{
+digitalWrite (13, HIGH);
+delay(1000);
+digitalWrite(13, LOW);
+delay (1000);
+}
+Push Button & LED Sketch:
+const int button Pin = 8;
+const int ledPin 13;
+int buttonState = 0;
+void setup()
+{
+pin Mode(led Pin, OUTPUT);
+pinMode(button Pin , INPUT);
+}
+void loop()
+{
+buttonState = digitalRead (button Pin);
+if (buttonState == HIGH)
+{
+digital Write(led Pin , HIGH);
+}
+else
+{
+digitalWrite(ledPin, LOW);
+}
+}
+Push Button & LED Sketch:
+const int button Pin = 8;
+const int ledPin = 13;
+int buttonState = 0;
+void setup()
+{
+pinMode(ledPin, OUTPUT);
+pinMode(buttonPin , INPUT);
+}
+void loop()
+{
+buttonState = digitalRead (buttonPin);
+if (buttonState = HIGH)
+{
+digitalWrite(ledPin , HIGH);
+}
+Else
+{
+digital Write(led Pin , LOW)
+}
+}
