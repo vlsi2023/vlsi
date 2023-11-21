@@ -10,6 +10,8 @@ delay(1000);
 digitalWrite(13, LOW);
 delay (1000);
 }
+
+
 Push Button & LED Sketch:
 const int button Pin = 8;
 const int ledPin 13;
@@ -52,3 +54,124 @@ Else
 digital Write(led Pin , LOW)
 }
 }
+
+
+Ultrasonic Sensor Sketch:
+#define trigPin 8
+#define echoPin 9
+long duration;
+int distance;
+void setup()
+{
+Serial.begin (9600);
+pinMode (trigPin, OUTPUT);
+pinMode (echoPin, INPUT);
+}
+void loop()
+{
+digitalWrite (trigPin,LOW);
+delayMicroseconds (2);
+digitalWrite (trigPin, HIGH);
+delay Microseconds(10);
+digitalWrite (trigPin,LOW);
+duration=pulseln (echoPin, HIGH);
+distance=(duration* 0.034/2);
+Serial.print ("Distance : ");
+Serial.print (distance);
+Serial.printin (" cm ");
+delay(1000);
+}
+
+
+LM35 Temp Sensor Sketch:
+void setup ()
+{
+Serial.begin (9600); // open the serial port at 9600 bps:
+Serial.println ("Smart Logic Tech");
+Serial. printIn ("Voltmeter Demonstration");
+}
+void loop( )
+{
+float Sensel;
+int err;
+float temp;
+Sensel= analogRead (A5) * (5.0 / 1023.0);_ //Read Analog Voltage Serial. print
+("Volatage =");
+Serial.printin (Sensel);
+temp = (5.00 * analogRead(A4) * 100) / 1024.0; //Read Temperature Sensor
+Serial.print("Current Temperature is ");
+Serial. print (temp);
+Serial.printin);
+delay (2000);
+}
+
+
+
+DC Motor
+
+void setup() {
+// initialize digital pin as an output.
+pinMode(8, OUTPUT);
+pinMode(9, OUTPUT);
+pinMode(10, OUTPUT);
+pinMode(11, OUTPUT);
+pinMode (12, OUTPUT);
+pinMode(13, OUTPUT);
+｝
+// the loop function runs over and over again forever
+void loop() {
+digital Write(10, HIGH);
+digital Write(11, HIGH);
+digital Write(8, HIGH);
+digital Write(9, LOW);
+digital Write (12, HIGH); digital Write(13, LOW);
+delay (5000);
+digital Write (8, LOW);
+digital Write(9, HIGH);
+digital Write (12, LOW);
+digital Write(13, HIGH);
+delay (5000);
+}
+Chopde writing
+import RPI. GPIO OS GPIO
+import time
+EN I = 25
+IN=26
+IN2 = 2y
+GPSO. setmade (GPIO. bCM)
+GPID. SetUP (ENI, GPIO.OUT)
+GPIO. setup (INI, GPIO. OUT)
+GPID. setup (IN2, GPIO. OUT)
+def destroy () ;
+GPID. output (25, False)
+GPID. output (26, False)
+GPIO. output (21, False)
+GPIO. Eleanup ()
+def clockwise ();
+GPIO. output (25, True)
+GPIO. Output ( 26, True)
+GPIO. Output (27, False)
+def Anticlockcoise ();
+GPIO. Output 25, True)
+GPIO. Output (26, False)
+GPTE. Output (21, True)
+def stop();
+GPIO. Output (25, False)
+GPIO. Jutput (26, False)
+GP I0. Output (21, False)
+if - name - = = ‘- main';
+try:
+while True:
+clockwise ()
+time. sleep (1)
+stop ()
+time. sleep (1)
+Anticlockwise (）
+time. sleep (2)
+Stop ()
+time. sleep (1)
+except Keyboard Interrupt:
+destroy ()
+
+
+
